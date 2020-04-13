@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCTBank.DAL", "JCTBank.DAL\JCTBank.DAL.csproj", "{2F791723-EE77-4006-B372-7CD7ACF2581A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCTBank.Entity", "JCTBank.Entity\JCTBank.Entity.csproj", "{4F7286AD-DD8A-44E8-AC42-20CEC643B824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCTBank.BLL", "JCTBank.BLL\JCTBank.BLL.csproj", "{6FE9E40E-E77D-4487-A8AB-56B400D63B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCTBank.MobilApp", "JCTBank.MobilApp\JCTBank.MobilApp.csproj", "{1CF65163-6DED-48D4-A434-0490A65F6DDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F791723-EE77-4006-B372-7CD7ACF2581A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F791723-EE77-4006-B372-7CD7ACF2581A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F791723-EE77-4006-B372-7CD7ACF2581A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F791723-EE77-4006-B372-7CD7ACF2581A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7286AD-DD8A-44E8-AC42-20CEC643B824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7286AD-DD8A-44E8-AC42-20CEC643B824}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7286AD-DD8A-44E8-AC42-20CEC643B824}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7286AD-DD8A-44E8-AC42-20CEC643B824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE9E40E-E77D-4487-A8AB-56B400D63B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE9E40E-E77D-4487-A8AB-56B400D63B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE9E40E-E77D-4487-A8AB-56B400D63B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE9E40E-E77D-4487-A8AB-56B400D63B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CF65163-6DED-48D4-A434-0490A65F6DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CF65163-6DED-48D4-A434-0490A65F6DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CF65163-6DED-48D4-A434-0490A65F6DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CF65163-6DED-48D4-A434-0490A65F6DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B17942E3-78FA-4A93-B1A2-81E509C154CD}
+	EndGlobalSection
+EndGlobal

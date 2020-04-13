@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SaleHGS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="balance" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="customerTCKN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="plateNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="saleDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="webOrMobil" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaleHGSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaleHGSResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PlateNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="balance" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoadBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LoadBalanceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PlateNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBalanceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SaleHGSSoapIn">
+    <wsdl:part name="parameters" element="tns:SaleHGS" />
+  </wsdl:message>
+  <wsdl:message name="SaleHGSSoapOut">
+    <wsdl:part name="parameters" element="tns:SaleHGSResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoadBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:LoadBalance" />
+  </wsdl:message>
+  <wsdl:message name="LoadBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:LoadBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBalance" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBalanceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HGSServiceSoap">
+    <wsdl:operation name="SaleHGS">
+      <wsdl:input message="tns:SaleHGSSoapIn" />
+      <wsdl:output message="tns:SaleHGSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadBalance">
+      <wsdl:input message="tns:LoadBalanceSoapIn" />
+      <wsdl:output message="tns:LoadBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalance">
+      <wsdl:input message="tns:UpdateBalanceSoapIn" />
+      <wsdl:output message="tns:UpdateBalanceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HGSServiceSoap" type="tns:HGSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaleHGS">
+      <soap:operation soapAction="http://tempuri.org/SaleHGS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBalance">
+      <soap:operation soapAction="http://tempuri.org/LoadBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalance">
+      <soap:operation soapAction="http://tempuri.org/UpdateBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HGSServiceSoap12" type="tns:HGSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SaleHGS">
+      <soap12:operation soapAction="http://tempuri.org/SaleHGS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoadBalance">
+      <soap12:operation soapAction="http://tempuri.org/LoadBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBalance">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HGSService">
+    <wsdl:port name="HGSServiceSoap" binding="tns:HGSServiceSoap">
+      <soap:address location="https://localhost:44352/HGSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HGSServiceSoap12" binding="tns:HGSServiceSoap12">
+      <soap12:address location="https://localhost:44352/HGSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
